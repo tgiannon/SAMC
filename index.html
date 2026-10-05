@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAMC Prep</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">SAMC <span>PREP</span></div>
+  <div class="subtitle">Sergeant Audie Murphy Club Board Preparation</div>
+</header>
+
+<main>
+  <section id="home" class="screen active">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">BOARD PREPARATION</p>
+        <h1>Lead from the front.</h1>
+        <p>Study smarter. Practice harder. Walk into the board prepared.</p>
+      </div>
+      <div class="readiness">
+        <strong id="readiness">0%</strong>
+        <span>Readiness</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <button class="card primary" onclick="showScreen('study')"><b>📚 Study</b><span>Official-source study topics</span></button>
+      <button class="card" onclick="showScreen('quiz')"><b>🎯 Quick Quiz</b><span>Test yourself</span></button>
+      <button class="card" onclick="showScreen('board')"><b>🏆 Mock Board</b><span>Simulate the board</span></button>
+      <button class="card" onclick="showScreen('progress')"><b>📊 Progress</b><span>Find your weak areas</span></button>
+    </div>
+
+    <div class="notice">
+      <b>Source-first design</b>
+      <p>Questions are tagged to their source so outdated Army guidance can be identified and replaced instead of silently becoming “AI facts.”</p>
+    </div>
+  </section>
+
+  <section id="study" class="screen">
+    <button class="back" onclick="showScreen('home')">← Home</button>
+    <h2>Study</h2>
+    <p class="muted">Start with official SAMC material. More chapters and current regulations can be added later.</p>
+    <div id="categories" class="list"></div>
+  </section>
+
+  <section id="quiz" class="screen">
+    <button class="back" onclick="showScreen('home')">← Home</button>
+    <h2>Quick Quiz</h2>
+    <div id="quizBox"></div>
+  </section>
+
+  <section id="board" class="screen">
+    <button class="back" onclick="showScreen('home')">← Home</button>
+    <h2>Mock Board</h2>
+    <p class="muted">Answer out loud as if you are standing before the board. Then reveal the evaluation points.</p>
+    <div id="boardBox"></div>
+  </section>
+
+  <section id="progress" class="screen">
+    <button class="back" onclick="showScreen('home')">← Home</button>
+    <h2>My Progress</h2>
+    <div id="progressBox"></div>
+  </section>
+</main>
+
+<footer>
+  <div>SAMC Prep — prototype</div>
+  <div>Sources: U.S. Army / official SAMC material</div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
